@@ -62,14 +62,14 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
-## Media
+<!-- ## Media
 
-[Video Link]()
+[Video Link]() -->
 
 ## Links
 
-- [Deployed Website Link]()
-- [Code Repository Link]()
+- [Deployed Website Link](https://tech-blognese-so-good.herokuapp.com/)
+- [Code Repository Link](https://github.com/AndrewT11/Tech-Blognese-so-good)
 
 ## Credits
 
