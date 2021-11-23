@@ -1,3 +1,7 @@
+body {
+  background-image: url();
+}
+
 header,
 .post:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -22,4 +26,36 @@ header,
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+#header {
+  background-color: black;
+  color: white;
+}
+
+#navbar {
+}
+
+#title {
+  color: rgb(8, 248, 0);
+}
+
+#login {
+  color: rgb(8, 248, 0);
+  margin: 10px;
+}
+
+#logout {
+  color: rgb(8, 248, 0);
+  margin: 10px;
+}
+
+#homebutton {
+  color: rgb(8, 248, 0);
+  margin: 10px;
+}
+
+#dashbutton {
+  color: rgb(8, 248, 0);
+  margin: 10px;
 }

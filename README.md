@@ -12,7 +12,7 @@ You are important.
 
 Before running this program:
 
-1. Fork the repo at https://github.com/AndrewT11/Back-end-that-E-Commerce-up
+1. Fork the repo at https://github.com/AndrewT11/Tech-Blognese-so-good
 2. Run "npm init -y" in the command line prompt
 3. Run "npm install" in the command line prompt
 4. Log onto MySQL
