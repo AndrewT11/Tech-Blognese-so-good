@@ -17,13 +17,17 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // //update post route
-// router.put('/:id', withAuth, async (req, res) => {
-//   try {
-//     const postData = await Post.update({
-
-//     })
-//   }
-// })
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.update({
+      name: req.body.name,
+      description: req.body.description,
+    });
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(504).json(err);
+  }
+});
 
 //delete post route
 router.delete('/:id', withAuth, async (req, res) => {
