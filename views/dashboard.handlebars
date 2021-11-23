@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+  <div class="col-auto" id="welcome">
+    <h2 >Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
    {{#if posts.length}}
-  <div class="col-md-12 post-list">
+  <div class="col-md-12 post-list" id="welcome">
     <h3>Current Posts:</h3>
 
     {{#each posts as |post|}}
@@ -16,7 +16,7 @@
         <h5>{{post.description}}</h5>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-info" data-id="{{post.idU}}">UPDATE</button>
+        <button class="btn btn-sm btn-info" data-id="{{post.id}}">UPDATE</button>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
@@ -25,41 +25,25 @@
     {{/each}}
   </div>
   {{/if}}
-  <div class="col-md-12">
+  <div class="col-md-12" id="welcome">
     <h3>Create a New Blog Post:</h3>
 
     <form class="form new-post-form">
       <div class="form-group">
-        <label for="post-name">Blog Title:</label>
+        <label for="post-name">Post Name:</label>
         <input class="form-input" type="text" id="post-name" name="post-name" />
       </div>
       <div class="form-group">
-        <label for="post-desc">Post:</label>
+        <label for="post-desc">Description:</label>
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn">Create</button>
       </div>
     </form>
   </div>
 
-  {{!-- {{#if posts.length}}
-  <div class="col-md-12 post-list">
-    <h3>Current Posts:</h3>
 
-    {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
-        <h5>{{post.description}}</h5>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}} --}}
 </div>
 
 <script src="./js/dashboard.js"></script>

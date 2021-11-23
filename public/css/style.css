@@ -1,5 +1,7 @@
 body {
-  background-image: url();
+  background-image: url(https://motionarray.imgix.net/preview-57687PKKU45bOO7_0010.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header,
@@ -58,4 +60,30 @@ header,
 #dashbutton {
   color: rgb(8, 248, 0);
   margin: 10px;
+}
+
+.btn {
+  background-color: rgb(8, 248, 0);
+  color: black;
+  font-size: medium;
+}
+
+.post {
+  color: rgb(8, 248, 0);
+}
+
+#post {
+  color: rgb(8, 248, 0);
+}
+
+.form {
+  color: rgb(8, 248, 0);
+}
+
+#welcome {
+  color: rgb(8, 248, 0);
+}
+
+#postlink {
+  color: rgb(8, 248, 0);
 }

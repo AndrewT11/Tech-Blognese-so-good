@@ -1,10 +1,10 @@
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
 <div class="row mb-4 post">
-  <div class="col-md-5">
+  <div class="col-md-9">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/post/{{post.id}}">{{post.name}}</a>
+      <a href="/post/{{post.id}}" id="postlink">{{post.name}}</a>
     </h2>
     <p>
       {{!-- <span for="img" aria-label="money">💲</span> --}}
@@ -14,7 +14,7 @@
     </p>
     <p>{{post.description}}</p>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-3" id="post">
     <p>
       Created by {{post.user.name}} on {{format_date post.date_created}}
     </p>

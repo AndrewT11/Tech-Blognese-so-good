@@ -18,6 +18,9 @@ Post.init(
     description: {
       type: DataTypes.STRING,
     },
+    // comment: {
+    //   type: DataTypes.STRING,
+    // },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
