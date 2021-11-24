@@ -5,6 +5,7 @@
   
   {{#each comments as |comment|}}
   <p>{{comment.content}}</p>
+  <p>{{comment.user.name}} -{{format_date comment.date_created}}</p>
   {{/each}}
 </div>
 <form class="form new-comment-form">

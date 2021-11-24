@@ -57,10 +57,10 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.post-list')
-//   .addEventListener('click', updateButtonHandler);
+document
+  .querySelector('#updatebtn')
+  .addEventListener('click', updateButtonHandler);
 
 document
-  .querySelector('.post-list')
+  .querySelector('#deletebtn')
   .addEventListener('click', delButtonHandler);

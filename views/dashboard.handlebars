@@ -6,7 +6,7 @@
 
 <div class="row mt-4">
    {{#if posts.length}}
-  <div class="col-md-12 post-list" id="welcome">
+  <div class="col-md-12" id="welcome">
     <h3>Current Posts:</h3>
 
     {{#each posts as |post|}}
@@ -16,10 +16,10 @@
         <h5>{{post.description}}</h5>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-info" data-id="{{post.id}}">UPDATE</button>
+        <button class="btn btn-sm btn-info" id="updatebtn" data-id="{{post.id}}">UPDATE</button>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" id="deletebtn" data-id="{{post.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
