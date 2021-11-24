@@ -12,6 +12,7 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newPost);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -19,10 +20,18 @@ router.post('/', withAuth, async (req, res) => {
 // //update post route
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const postData = await Post.update({
-      name: req.body.name,
-      description: req.body.description,
-    });
+    const postData = await Post.update(
+      {
+        name: req.body.name,
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
     res.status(200).json(postData);
   } catch (err) {
     res.status(504).json(err);

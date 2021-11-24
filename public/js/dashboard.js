@@ -21,42 +21,21 @@ const newFormHandler = async (event) => {
   }
 };
 
-// const commentFormHandler = async (event) => {
-//   event.preventdefault();
+const updateButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
 
-//   const comment = document.querySelector('#comment-desc');
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'UPDATE',
+    });
 
-//   if (comment) {
-//     const response = await fetch('/api/posts', {
-//       method: 'POST',
-//       body: JSON.stringify({ comment }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
-//     if (response.ok) {
-//       document.location.replace('/post');
-//     } else {
-//       alert('Failed to create comment');
-//     }
-//   }
-// };
-
-// const updateButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
-
-//     const response = await fetch(`/api/posts/${id}`, {
-//       method: 'UPDATE',
-//     });
-
-//     if (response.ok) {
-//       document.location.replace('/dashboard');
-//     } else {
-//       alert('Failed to update post');
-//     }
-//   }
-// };
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to update post');
+    }
+  }
+};
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -73,10 +52,6 @@ const delButtonHandler = async (event) => {
     }
   }
 };
-
-// document
-//   .querySelector('.mew-comment-form')
-//   .addEventListener('submit', commentFormHandler);
 
 document
   .querySelector('.new-post-form')
