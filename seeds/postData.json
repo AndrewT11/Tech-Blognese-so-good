@@ -10,5 +10,9 @@
   {
     "name": "Object-Relational Mapping",
     "description": "I have really loved learning about ORMs. It's really simplified the way I create queries in SQL!"
+  },
+  {
+    "name": "Investing in PYPL",
+    "description": "It is painful investing in PayPal. Ever since announcing they would acquire Pinterest, the stock price has fallen like a rock. Even after stating they have backed out of the acquisition, the price continues to fall. DCAing this is PPAAIINNFUL."
   }
 ]
