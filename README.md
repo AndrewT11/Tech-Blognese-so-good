@@ -12,15 +12,9 @@ You are important.
 
 Before running this program:
 
-1. Fork the repo at https://github.com/AndrewT11/Tech-Blognese-so-good
-2. Run "npm init -y" in the command line prompt
-3. Run "npm install" in the command line prompt
-4. Log onto MySQL
-5. At your root file, run "source db/schema.sql;" to run the schema.js code and create your database/tables
-6. Exit MySQL
-7. Run "node seeds/index.js;" in the command line prompt to seed your database
-8. Type "npm start" into command line prompt to connect to the server
-9. Load Insomnia, connect to the correct port, and enjoy E-Commerce Back-End application
+1. Click the Heroku Deployed Website link located below
+2. Login with your account or create an account.
+3. Begin blogging!
 
 ## Acceptance Criteria
 
