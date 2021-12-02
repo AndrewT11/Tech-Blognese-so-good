@@ -16,10 +16,11 @@
         <h5>{{post.description}}</h5>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-info" id="updatebtn" data-id="{{post.id}}">UPDATE</button>
+        <textarea class="form-input" id="update" name="update"></textarea>
+        <button class="btn btn-sm btn-info updateBtn" id="updatebtn" data-id="{{post.id}}">UPDATE</button>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" id="deletebtn" data-id="{{post.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger deleteBtn" id="deletebtn" data-id="{{post.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -47,4 +48,4 @@
 </div>
 
 <script src="./js/dashboard.js"></script>
-
+{{!-- <script src="./js/update.js"></script> --}}

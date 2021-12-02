@@ -21,18 +21,32 @@ const newFormHandler = async (event) => {
   }
 };
 
+//update getting to failed alert. info not being sent from here to route. Line 36 is the error.
+//console log does log the update
 const updateButtonHandler = async (event) => {
+  event.preventDefault();
+
+  const update = document.querySelector('#update').value.trim();
+
+  console.log(update);
+
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
+    console.log(id);
+    if (update) {
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ description: update }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-    const response = await fetch(`/api/posts/${id}`, {
-      method: 'UPDATE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to update post');
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to update post');
+      }
     }
   }
 };
@@ -48,6 +62,7 @@ const delButtonHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
+      console.log(err);
       alert('Failed to delete post');
     }
   }
@@ -57,10 +72,10 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('#updatebtn')
-  .addEventListener('click', updateButtonHandler);
+document.querySelectorAll('.updateBtn').forEach((btn) => {
+  btn.addEventListener('click', updateButtonHandler);
+});
 
-document
-  .querySelector('#deletebtn')
-  .addEventListener('click', delButtonHandler);
+document.querySelectorAll('.deleteBtn').forEach((btn) => {
+  btn.addEventListener('click', delButtonHandler);
+});

@@ -4,6 +4,8 @@ const updateFormHandler = async (event) => {
   const update = document.querySelector('#update').value.trim();
   const postID = window.location.href[window.location.href.length - 1];
 
+  console.log(update);
+
   if (update) {
     const response = await fetch('/api/posts/' + postID, {
       method: 'POST',
@@ -13,8 +15,8 @@ const updateFormHandler = async (event) => {
       },
     });
     if (response.ok) {
-      document.location.replace('/posts/' + postID);
-      //   document.location.reload()
+      //   document.location.replace('/posts/' + postID);
+      document.location.reload();
     } else {
       alert('Failed to create comment');
     }
@@ -22,5 +24,5 @@ const updateFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.update-form')
-  .addEventListener('submit', updateFormHandler);
+  .querySelector('#updatebtn')
+  .addEventListener('click', updateFormHandler);

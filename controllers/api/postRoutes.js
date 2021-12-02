@@ -20,6 +20,7 @@ router.post('/', withAuth, async (req, res) => {
 // //update post route
 router.put('/:id', withAuth, async (req, res) => {
   try {
+    console.log('hello');
     const postData = await Post.update(
       {
         description: req.body.description,
@@ -37,8 +38,10 @@ router.put('/:id', withAuth, async (req, res) => {
       return;
     }
 
+    console.log(postData);
     res.status(200).json(postData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
